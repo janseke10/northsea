@@ -36,7 +36,7 @@ export default function Home() {
                 alt="Profile picture of Janneke van Hulten"
                 width={224}
                 height={224}
-                className="rounded-full object-cover "
+                className="rounded-full object-cover object-right-bottom"
                 priority
               />
             </div>
