@@ -83,7 +83,7 @@ export default function Home() {
               <p>KvK: 88390926</p>
 
               <p>
-                Email:
+                E-mail:{" "}
                 <a
                   href="mailto:info@northseasoftware.dev"
                   className="text-skyblue hover:underline hover:text-skyorange"
