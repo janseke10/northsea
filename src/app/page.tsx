@@ -30,12 +30,12 @@ export default function Home() {
       <div className="basis-full md:basis-3/5 bg-white flex flex-col justify-between h-auto md:h-screen p-8">
         <div className="flex flex-col items-center text-center w-full max-w-md mx-auto md:mt-10">
           <div className="mx-auto my-6 rounded-full border-4 border-skyorange p-1 inline-block">
-            <div className="rounded-full overflow-hidden border-4 border-skyblue w-42 h-42">
+            <div className="rounded-full overflow-hidden border-4 border-skyblue w-42 h-42 md:w-56 md:h-56">
               <Image
                 src="/profile.jpg" // Make sure the file exists in /public
                 alt="Profile picture of Janneke van Hulten"
-                width={168}
-                height={168}
+                width={224}
+                height={224}
                 className="rounded-full object-cover "
                 priority
               />
@@ -49,7 +49,7 @@ export default function Home() {
           </h1>
           <p className="font-mono text-skyorange mt-4 italic">Your website?</p>
           <p className="font-mono text-skyorange italic">
-            Built in a van, works everywhere.
+            Built anywhere, works everywhere.
           </p>
         </div>
         <footer className="w-full  mx-auto text-sm text-skyblue mt-8">
