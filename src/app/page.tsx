@@ -1,103 +1,100 @@
 import Image from "next/image";
+import Link from "next/link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
+    <main className="w-full min-h-screen flex flex-col md:flex-row">
+      <div className="relative h-64 md:h-screen md:basis-2/5 w-full">
         <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
+          className="object-cover"
+          src="/IMG_6659.jpg"
+          alt="Beautiful sky"
+          fill
         />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      </div>
+      <div className="hidden md:flex flex-row flex-1 gap-2 bg-white">
+        <div className="w-2 h-screen bg-skybrown" />
+        <div className="w-2 h-screen bg-skynude" />
+        <div className="w-2 h-screen bg-skyorange" />
+        <div className="w-2 h-screen bg-skyblue" />
+      </div>
+      <div className="flex md:hidden flex-col flex-1 gap-2 bg-white">
+        <div className="h-1 w-screen bg-skybrown" />
+        <div className="h-1 w-screen bg-skynude" />
+        <div className="h-1 w-screen bg-skyorange" />
+        <div className="h-1 w-screen bg-skyblue" />
+      </div>
+      <div className="basis-full md:basis-3/5 bg-white flex flex-col justify-between h-auto md:h-screen p-8">
+        <div className="flex flex-col items-center text-center w-full max-w-md mx-auto md:mt-10">
+          <div className="mx-auto my-6 rounded-full border-4 border-skyorange p-1 inline-block">
+            <div className="rounded-full overflow-hidden border-4 border-skyblue w-42 h-42">
+              <Image
+                src="/profile.jpg" // Make sure the file exists in /public
+                alt="Profile picture of Janneke van Hulten"
+                width={168}
+                height={168}
+                className="rounded-full object-cover "
+                priority
+              />
+            </div>
+          </div>
+          <h1 className="text-skyblue text-4xl font-bold font-sans">
+            Janneke van Hulten
+          </h1>
+          <h1 className="font-mono text-skyblue text-2xl mt-2">
+            North Sea Software Development
+          </h1>
+          <p className="font-mono text-skyorange mt-4 italic">Your website?</p>
+          <p className="font-mono text-skyorange italic">
+            Built in a van, works everywhere.
+          </p>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        <footer className="w-full  mx-auto text-sm text-skyblue mt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center w-full gap-4">
+            <div className="flex  gap-4">
+              <Link
+                href="https://www.linkedin.com/in/janneke-van-hulten-b7a4a7190/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center  hover:text-skyorange transition"
+              >
+                <FontAwesomeIcon
+                  icon={faLinkedin}
+                  className="text-skyblue w-6 h-6 hover:text-skyorange"
+                />
+              </Link>
+              <Link
+                href="https://github.com/janseke10"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center  hover:text-skyorange transition"
+              >
+                <FontAwesomeIcon
+                  icon={faGithub}
+                  className="text-skyblue w-6 h-6 hover:text-skyorange"
+                />
+              </Link>
+            </div>
+
+            <div className="space-x-4 flex flex-row flex-wrap justify-center md:justify-end text-center md:text-right">
+              <p>KvK: 88390926</p>
+
+              <p>
+                Email:
+                <a
+                  href="mailto:info@northseasoftware.dev"
+                  className="text-skyblue hover:underline hover:text-skyorange"
+                >
+                  info@northseasoftware.dev
+                </a>
+              </p>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </main>
   );
 }

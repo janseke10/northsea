@@ -3,13 +3,21 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --skyblue: #496c96;
+  --skyorange: #d17643;
+  --skynude: #f2cbbd;
+  --skybrown: #604742;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-skyblue: var(--skyblue);
+  --color-skyorange: var(--skyorange);
+  --color-skynude: var(--skynude);
+  --color-skybrown: var(--skybrown);
   --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-mono: var(--font-space-mono);
 }
 
 @media (prefers-color-scheme: dark) {
