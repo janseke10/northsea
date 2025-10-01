@@ -9,7 +9,7 @@ export default function Home() {
     <main className="w-full min-h-screen flex flex-col md:flex-row">
       <div className="relative h-64 md:h-screen md:basis-2/5 w-full">
         <Image
-          className="object-cover"
+          className="object-cover object-[50%_70%]"
           src="/IMG_6659.jpg"
           alt="Beautiful sky"
           fill
